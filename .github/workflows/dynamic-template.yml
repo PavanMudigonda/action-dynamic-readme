@@ -22,7 +22,7 @@ jobs:
       - name: "Github Repository Metadata"
         uses: varunsridharan/action-repository-meta@main
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "Dynamic Template Render"
         uses: varunsridharan/action-dynamic-readme@main
