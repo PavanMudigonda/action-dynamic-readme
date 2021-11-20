@@ -1,2 +1,2 @@
-<\!-- START PavanMudigonda/coverage-reporter@main/badge_template.md -->
-<\!-- END PavanMudigonda/coverage-reporter@main/badge_template.md -->
+<\!-- START badge-template.md -->
+<\!-- END badge-template.md -->
