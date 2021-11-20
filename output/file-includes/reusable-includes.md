@@ -103,32 +103,12 @@ jobs:
         env:
           GITHUB_TOKEN: 
 
-      - name: "Setup PHP with pecl extension"
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '7.4'
-
-      - name: "Regenerate Templates Files"
-        run: php .github/scripts/create-markdown.php
-
-      - name: "Updated Generated Template"
-        run: |
-          git config --global user.email "githubactionbot@gmail.com"
-          git config --global user.name "Github Action Bot"
-          git add -f ./templates/**
-          if [ "$(git status --porcelain)" != "" ]; then
-            git commit -m "Template Files Regenerated"
-            git push "https://x-access-token:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY"
-          fi
-        env:
-          GITHUB_TOKEN: 
 
       - name: "💫  Dynamic Template Render"
         uses: varunsridharan/action-dynamic-readme@main
         with:
           GLOBAL_TEMPLATE_REPOSITORY: PavanMudigonda/coverage-reporter
           files: |
-            README.md
             templates/file-includes/reusable-includes.md=output/file-includes/reusable-includes.md
         env:
           GITHUB_TOKEN: 
