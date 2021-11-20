@@ -5,3 +5,6 @@
 
 ---
 
+<\!-- START README.md -->
+
+<\!-- END README.md -->
