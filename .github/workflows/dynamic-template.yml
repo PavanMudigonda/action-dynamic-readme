@@ -50,6 +50,6 @@ jobs:
           global_template_repository: varunsridharan/varunsridharan
           files: |
             README.md
-            templates/file-includes/parts/feedback.md=README.md
+            templates/file-includes/reusable-includes.md=README.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
