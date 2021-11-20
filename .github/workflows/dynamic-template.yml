@@ -47,7 +47,7 @@ jobs:
       - name: "💫  Dynamic Template Render"
         uses: varunsridharan/action-dynamic-readme@main
         with:
-          global_template_repository: varunsridharan/varunsridharan
+          GLOBAL_TEMPLATE_REPOSITORY: PavanMudigonda/coverage-reporter
           files: |
             README.md
             templates/file-includes/reusable-includes.md=output/file-includes/reusable-includes.md
