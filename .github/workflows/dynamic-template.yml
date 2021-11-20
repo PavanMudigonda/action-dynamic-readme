@@ -30,6 +30,6 @@ jobs:
         with:
           GLOBAL_TEMPLATE_REPOSITORY: PavanMudigonda/coverage-reporter
           files: |
-            templates/file-includes/reusable-includes.md=output/file-includes/reusable-includes.md
+            templates/file-includes/reusable-includes.md=README.md
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
