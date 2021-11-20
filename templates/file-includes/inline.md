@@ -82,13 +82,13 @@ Include from remote repository with specific branch
 >
 > Example : [`octocat/Spoon-Knife@master/README.md`](https://github.com/octocat/Spoon-Knife) file will be loaded below.
 >
-> Using : `<\!-- include octocat/Spoon-Knife@master/README.md -->`
+> Using : `<\!-- include octocat/Spoon-Knife@main/README.md -->`
 
 <details> 
 <summary>Output :</summary>
 
 <pre>
-<!-- include octocat/Spoon-Knife@master/README.md -->
+<!-- include octocat/Spoon-Knife@main/README.md -->
 </pre>
 
 </details>
