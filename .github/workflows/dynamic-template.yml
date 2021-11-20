@@ -49,7 +49,7 @@ jobs:
         with:
           global_template_repository: varunsridharan/varunsridharan
           files: |
-            README.md
+            templates/badge-template.md
             templates/file-includes/reusable-includes.md=README.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
