@@ -99,16 +99,16 @@ Include from remote repository with specific branch
 > Using : 
 
 ```
-<\!-- START octocat/Spoon-Knife@main/README.md -->
-<\!-- END octocat/Spoon-Knife@main/README.md -->
+<\!-- START PavanMudigonda/reporter-coverage@main/badge-template.md -->
+<\!-- END PavanMudigonda/reporter-coverage@main/badge-template.md -->
 ```
 
 <details> 
 <summary>Output :</summary>
 
 <pre>
-<!-- START octocat/Spoon-Knife@main/README.md -->
-<!-- END octocat/Spoon-Knife@main/README.md -->
+<!-- START PavanMudigonda/reporter-coverage@main/badge-template.md -->
+<!-- END PavanMudigonda/reporter-coverage@main/badge-template.md -->
 </pre>
 
 </details>
