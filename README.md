@@ -31,7 +31,7 @@ Include from remote repository with specific branch
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <a href="">
-<img alt="CI Build" src="https://github.com/$GITHUB_REPOSITORY/actions/workflows/$GITHUB_WORKFLOW/badge.svg?branch=$”GITHUB_REF_NAME>
+<img alt="CI Build" src="https://github.com/PavanMudigonda/action-dynamic-readme/actions/workflows/$GITHUB_WORKFLOW/badge.svg?branch=main>
       </a>
 <br/>
 <img alt="Stale Pull Requests" src=".github/badges/stale-pr-count.svg">
