@@ -33,6 +33,7 @@ jobs:
           
       - name: "Concatenate Files"
         run: |
-          cat output/reusable-includes.md README.md > README.md
+          cat output/reusable-includes.md README.md > TEMP-README.md
+          mv TEMP-README.md README.md
           cat README.md
         
