@@ -30,13 +30,21 @@ jobs:
           GLOBAL_TEMPLATE_REPOSITORY: PavanMudigonda/coverage-reporter
           files: |
             README.md
-            templates/reusable-includes.md=README.md
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+            templates/reusable-includes.md=output/reusable-includes.md
           
-#       - name: "Concatenate Files"
-#         run: |
-#           cat output/reusable-includes.md README.md > TEMP-README.md
-#           mv TEMP-README.md README.md
-#           cat README.md
-        
+      - name: "Concatenate Files"
+        run: |
+          cat output/reusable-includes.md README.md > TEMP-README.md
+          mv TEMP-README.md README.md
+          cat README.md
+      - name: Commit Badges
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.username "GitHub Actions"
+          git add README.md
+          git commit -m "added updated read me" || true
+          
+      - name: Push commit
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
