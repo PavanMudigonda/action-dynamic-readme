@@ -23,10 +23,10 @@
 <!-- END PavanMudigonda/coverage-reporter@main/badge-template.md -->
 
 
-<!-- START README.md -->
+
 # hello 
 ##this is my starter
 ###repo
-<!-- END README.md -->
+
 
 
