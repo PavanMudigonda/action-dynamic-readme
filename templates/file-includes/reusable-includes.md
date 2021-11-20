@@ -1,2 +1,2 @@
-<\!-- START octocat/Spoon-Knife@main/README.md -->
-<\!-- END octocat/Spoon-Knife@main/README.md -->
+<\!-- START PavanMudigonda/coverage-reporter@main/badge_template.md -->
+<\!-- END PavanMudigonda/coverage-reporter@main/badge_template.md -->
