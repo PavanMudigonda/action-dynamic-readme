@@ -1,2 +1,2 @@
-<\!-- START PavanMudigonda/action-dynamic-readme@main/templates/badge-template.md -->
-<\!-- END PavanMudigonda/action-dynamic-readme@main/templates/badge-template.md -->
+<\!-- START octocat/Spoon-Knife@master/README.md -->
+<\!-- END octocat/Spoon-Knife@master/README.md -->
