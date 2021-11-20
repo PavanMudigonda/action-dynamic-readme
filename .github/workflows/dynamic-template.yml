@@ -33,6 +33,6 @@ jobs:
           
       - name: "Concatenate Files"
         run: |
-          pandoc -s $(cat README.md output/reusable-includes.md ) -o README.md
+          cat output/reusable-includes.md README.md > README.md
           cat README.md
         
