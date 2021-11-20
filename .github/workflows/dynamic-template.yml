@@ -29,11 +29,14 @@ jobs:
         with:
           GLOBAL_TEMPLATE_REPOSITORY: PavanMudigonda/coverage-reporter
           files: |
+            README.md
             templates/reusable-includes.md=output/reusable-includes.md
+        env:
+          GITHUB_TOKEN: ${{env.GITHUB_TOKEN}}
           
-      - name: "Concatenate Files"
-        run: |
-          cat output/reusable-includes.md README.md > TEMP-README.md
-          mv TEMP-README.md README.md
-          cat README.md
+#       - name: "Concatenate Files"
+#         run: |
+#           cat output/reusable-includes.md README.md > TEMP-README.md
+#           mv TEMP-README.md README.md
+#           cat README.md
         
