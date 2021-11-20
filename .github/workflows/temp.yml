@@ -1,0 +1,52 @@
+name: Template
+
+on:
+  push:
+    paths:
+      - templates/**
+      - .github/markdown-templates/**
+      - .github/scripts/**
+      - README.md
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  update_templates:
+    name: "Update Templates"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Fetching Repository Contents"
+        uses: actions/checkout@main
+
+      - name: "Github Repository Metadata"
+        uses: varunsridharan/action-repository-meta@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "Dynamic Template Render"
+        uses: varunsridharan/action-dynamic-readme@main
+        with:
+          GLOBAL_TEMPLATE_REPOSITORY: PavanMudigonda/coverage-reporter
+          files: |
+            README.md
+            templates/reusable-includes.md=README.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+#       - name: "Concatenate Files"
+#         run: |
+#           cat output/reusable-includes.md README.md > TEMP-README.md
+#           mv TEMP-README.md README.md
+#           cat README.md
+#       - name: Commit Badges
+#         run: |
+#           git config --local user.email "actions@github.com"
+#           git config --local user.username "GitHub Actions"
+#           git add README.md
+#           git commit -m "added updated read me" || true
+          
+#       - name: Push commit
+#         uses: ad-m/github-push-action@master
+#         with:
+#           github_token: ${{secrets.GITHUB_TOKEN}}
