@@ -99,16 +99,16 @@ Include from remote repository with specific branch
 > Using : 
 
 ```
-<\!-- START PavanMudigonda/reporter-coverage@main/badge-template.md -->
-<\!-- END PavanMudigonda/reporter-coverage@main/badge-template.md -->
+<\!-- START PavanMudigonda/coverage-reporter@main/badge-template.md -->
+<\!-- END PavanMudigonda/coverage-reporter@main/badge-template.md -->
 ```
 
 <details> 
 <summary>Output :</summary>
 
 <pre>
-<!-- START PavanMudigonda/reporter-coverage@main/badge-template.md -->
-<!-- END PavanMudigonda/reporter-coverage@main/badge-template.md -->
+<!-- START PavanMudigonda/coverage-reporter@main/badge-template.md -->
+<!-- END PavanMudigonda/coverage-reporter@main/badge-template.md -->
 </pre>
 
 </details>
