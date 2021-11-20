@@ -1,2 +1,2 @@
-<\!-- START PavanMudigonda/action-dynamic-readme@main/template/badge-template.md -->
-<\!-- END PavanMudigonda/action-dynamic-readme@main/template/badge-template.md -->
+<\!-- START PavanMudigonda/action-dynamic-readme@main/templates/badge-template.md -->
+<\!-- END PavanMudigonda/action-dynamic-readme@main/templates/badge-template.md -->
