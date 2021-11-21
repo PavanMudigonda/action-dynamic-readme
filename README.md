@@ -25,12 +25,8 @@
 ---
 
 
-<!-- START README.md -->
-hello there
-
-hi 
-how are you
-<!-- END README.md -->
+<!-- START PavanMudigonda/action-dynamic-readme@main/README.md -->
+<!-- END PavanMudigonda/action-dynamic-readme@main/README.md -->
 
 ---
 
