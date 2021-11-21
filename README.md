@@ -16,6 +16,8 @@
 <br/>
 <img alt="Code Coverage" src=".github/badges/code-coverage.svg">
 <br/>
+<img alt="DUMMY" src=".github/badges/dummy.svg">
+<br/>                                                              
 <img alt="Latest Release" src=".github/badges/latest-release.svg">
     </div>
   </foreignObject>
@@ -24,15 +26,5 @@
 
 ---
 
-
-<!-- START ./README.md -->
-hello hi have you been ?
-i am good and awesome
-                                                                 
-                                                               
-                                                                 
-<!-- END ./README.md -->
-
----
-
+{{ CONTENT }}
 
