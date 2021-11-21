@@ -19,19 +19,12 @@ jobs:
       - name: "Fetching Repository Contents"
         uses: actions/checkout@main
 
-      - name: "Github Repository Metadata"
-        uses: varunsridharan/action-repository-meta@main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: "Dynamic Template Render"
         uses: varunsridharan/action-dynamic-readme@main
         with:
-          GLOBAL_TEMPLATE_REPOSITORY: PavanMudigonda/coverage-reporter
           files: |
             README.md
             templates/reusable-includes.md=output/reusable-includes.md
-          
       - name: "Concatenate Files"
         run: |
           cat output/reusable-includes.md README.md > TEMP-README.md
