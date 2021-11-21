@@ -6,8 +6,8 @@
 ---
 
 
-<!-- START README.md -->
-<!-- END README.md -->
+<!-- START ./README.md -->
+<!-- END ./README.md -->
 
 ---
 
