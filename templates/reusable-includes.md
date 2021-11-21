@@ -5,8 +5,5 @@
 
 ---
 
-<!-- include ./README.md -->
-
----
-
+{{ CONTENT }}
 
