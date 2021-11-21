@@ -6,8 +6,8 @@
 ---
 
 
-<!-- START ./README.md -->
-<!-- END ./README.md -->
+<!-- START ${{env.GITHUB_REPOSITORY}}@${{env.GITHUB_REF_NAME}}/README.md -->
+<!-- END ${{env.GITHUB_REPOSITORY}}@${{env.GITHUB_REF_NAME}}/README.md -->
 
 ---
 
