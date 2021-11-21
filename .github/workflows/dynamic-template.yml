@@ -18,7 +18,11 @@ jobs:
     steps:
       - name: "Fetching Repository Contents"
         uses: actions/checkout@main
-
+      - name: "Repository Meta"
+        uses: varunsridharan/action-repository-meta@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
       - name: "Dynamic Template Render"
         uses: varunsridharan/action-dynamic-readme@main
         with:
