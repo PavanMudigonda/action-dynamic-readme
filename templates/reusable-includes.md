@@ -5,5 +5,5 @@
 
 ---
 
-{{ CONTENT }}
+${{ env.CONTENT }}
 
