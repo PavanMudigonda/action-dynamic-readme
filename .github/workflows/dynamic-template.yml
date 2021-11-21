@@ -22,8 +22,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: read existing content in readme.md
         run: |
-          EXISTING_CONTENT = 'cat README.md'
-          echo "$EXISTING_CONTENT"
+          cat README.md > $EXISTING_CONTENT
       
       - name: "Dynamic Template Render"
         uses: varunsridharan/action-dynamic-readme@main
