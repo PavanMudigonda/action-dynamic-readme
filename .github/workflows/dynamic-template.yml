@@ -16,8 +16,6 @@ jobs:
     name: "Update Templates"
     runs-on: ubuntu-latest
     steps:
-      - name: "Fetching Repository Contents"
-        uses: actions/checkout@main
       - name: "Repository Meta"
         uses: varunsridharan/action-repository-meta@main
         env:
