@@ -20,9 +20,6 @@ jobs:
         uses: varunsridharan/action-repository-meta@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: read existing content in readme.md
-        run: |
-          EXISTING_CONTENT = ${ cat README.md }
       
       - name: "Dynamic Template Render"
         uses: varunsridharan/action-dynamic-readme@main
@@ -30,6 +27,7 @@ jobs:
           files: templates/reusable-includes.md=README.md
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          EXISTING_CONTENT: hello how are you my friend
 #       - name: "Concatenate Files"
 #         run: |
 #           cat output/reusable-includes.md README.md > TEMP-README.md
