@@ -5,9 +5,7 @@
 
 ---
 
-
-<!-- START ./README.md -->
-<!-- END ./README.md -->
+<!-- include README.md -->
 
 ---
 
