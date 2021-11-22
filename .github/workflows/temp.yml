@@ -28,7 +28,7 @@ jobs:
         uses: varunsridharan/action-dynamic-readme@main
         with:
           files: |
-            templates/reusable-includes.md=output/reusable-includes.md
+            templates/reusable-includes.md=README.md
         env:
           GITHUB: ${{ secrets.GITHUB_TOKEN }}
 
