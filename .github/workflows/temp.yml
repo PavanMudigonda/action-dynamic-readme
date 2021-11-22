@@ -22,7 +22,8 @@ jobs:
       - name: Add Badge Template include start and end lines
         shell: pwsh
         run: |
-          $readme_path = ‘README.md’;
+          Copy-Item 'README.md' -Destination 'README_COPY.md'
+          $readme_path = ‘README_COPY.md’;
           $SELECT_START_STRING = Select-String -Path $readme_path -Pattern "<!-- START tr/.github@main/workflow-templates/common-cicd-workflows/workflows/badge-template.md -->";
           $SELECT_END_STRING = Select-String -Path $readme_path -Pattern "<!-- END tr/.github@main/workflow-templates/common-cicd-workflows/workflows/badge-template.md -->";
           if( $SELECT_END_STRING.Length -eq 0)
@@ -45,7 +46,8 @@ jobs:
       - name: "Dynamic Badge Template Render"
         uses: varunsridharan/action-dynamic-readme@main
         with:
-          files: ./README.md
+          files: |
+            README_COPY.md=README.md
         env:
           GITHUB: ${{ secrets.GITHUB_TOKEN }}
 
