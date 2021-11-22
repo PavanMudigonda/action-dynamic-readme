@@ -24,8 +24,6 @@
   </svg>
 
 ---
-
-                                                                 
 <!-- END PavanMudigonda/coverage-reporter@main/badge-template.md -->
 
 ---
