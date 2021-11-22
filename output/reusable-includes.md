@@ -16,11 +16,19 @@
 <br/>
 <img alt="Code Coverage" src=".github/badges/code-coverage.svg">
 <br/>
+<img alt="DUMMY" src=".github/badges/dummy.svg">
+<br/>                                                              
 <img alt="Latest Release" src=".github/badges/latest-release.svg">
     </div>
   </foreignObject>
   </svg>
+
+---
+
+                                                                 
 <!-- END PavanMudigonda/coverage-reporter@main/badge-template.md -->
+
+---
 
 
 
