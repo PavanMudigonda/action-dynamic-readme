@@ -20,11 +20,13 @@
 <img alt="test123" src=".github/badges/test123.svg">
 <br/>
 <img alt="test12e3ew3" src=".github/badges/test1ewewew23.svg">
+<br/><img alt="dfd4rwee44334343" src=".github/badges/434refdr4r5344.svg">
 <br/>
 <img alt="Latest Release" src=".github/badges/latest-release.svg">
     </div>
   </foreignObject>
   </svg>
+
 
 <!-- END PavanMudigonda/coverage-reporter@main/badge-template.md -->
 ---
