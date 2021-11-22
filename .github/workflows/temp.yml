@@ -44,5 +44,5 @@ jobs:
           files: |
             README_COPY.md=README.md
         env:
-          GITHUB: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
