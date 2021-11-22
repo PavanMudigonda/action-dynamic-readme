@@ -28,7 +28,7 @@ jobs:
       - name: "Add Rendered Badge Template to existing README.md"
         run: |
           cat output/reusable-includes.md README.md > TEMP-README.md
-          mv TEMP-README.md README.md
+          mv -n TEMP-README.md README.md
 
 #  COMMIT BADGES and README.md changes
       - name: Commit badge
