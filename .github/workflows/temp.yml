@@ -24,24 +24,19 @@ jobs:
         run: |
           Copy-Item 'README.md' -Destination 'README_COPY.md'
           $readme_path = ‘README_COPY.md’;
-          $SELECT_START_STRING = Select-String -Path $readme_path -Pattern "<!-- START tr/.github@main/workflow-templates/common-cicd-workflows/workflows/badge-template.md -->";
-          $SELECT_END_STRING = Select-String -Path $readme_path -Pattern "<!-- END tr/.github@main/workflow-templates/common-cicd-workflows/workflows/badge-template.md -->";
-          if( $SELECT_END_STRING.Length -eq 0)
+          $SELECT_START_STRING = Select-String -Path $readme_path -Pattern "<!-- START PavanMudigonda/coverage-reporter@main/badge-template.md -->";
+          $SELECT_END_STRING = Select-String -Path $readme_path -Pattern "<!-- END PavanMudigonda/coverage-reporter@main/badge-template.md -->";
+          if ( ($SELECT_START_STRING.Length -eq 0) -and ($SELECT_END_STRING.Length -eq 0) )
           {
-            Write-Output "Adding badge template end line to README markdown";
+            Write-Output "Adding badge template start and end line to README markdown";
             $readme_contents = Get-Content $readme_path;
-            "<!-- END tr/.github@main/workflow-templates/common-cicd-workflows/workflows/badge-template.md -->”  + “`n” + $readme_contents + (Get-Content $readme_path -Raw) | Set-Content $readme_path;
+            "<!-- START PavanMudigonda/coverage-reporter@main/badge-template.md -->" + "'n" + "<!-- END PavanMudigonda/coverage-reporter@main/badge-template.md -->” + “`n” + '---' + “`n” + $readme_contents + (Get-Content $readme_path -Raw) | Set-Content $readme_path;
           }
-          if( $SELECT_START_STRING.Length -eq 0)
-          {
-            Write-Output "Adding badge template start line to README markdown";
-            $readme_contents = Get-Content $readme_path;
-            "<!-- START tr/.github@main/workflow-templates/common-cicd-workflows/workflows/badge-template.md -->”  + “`n” + $readme_contents + (Get-Content $readme_path -Raw) | Set-Content $readme_path;
-          }
-          else
+            else
           {
             Write-Output "Already having badge template lines";
           }
+
 
       - name: "Dynamic Badge Template Render"
         uses: varunsridharan/action-dynamic-readme@main
