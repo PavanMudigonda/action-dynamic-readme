@@ -44,18 +44,20 @@ jobs:
           files: |
             README_COPY.md
             README_COPY.md=README.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             
-#  COMMIT BADGES
-      - name: Commit badge
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add README.md
-          git commit -m "Added/Updated readme" || true
+# #  COMMIT BADGES
+#       - name: Commit badge
+#         run: |
+#           git config --local user.email "action@github.com"
+#           git config --local user.name "GitHub Action"
+#           git add README.md
+#           git commit -m "Added/Updated readme" || true
 
-#  PUSH BADGE COMMIT
-      - name: Push badge commit
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+# #  PUSH BADGE COMMIT
+#       - name: Push badge commit
+#         uses: ad-m/github-push-action@master
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           branch: main
