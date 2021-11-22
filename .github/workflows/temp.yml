@@ -42,11 +42,9 @@ jobs:
         uses: varunsridharan/action-dynamic-readme@main
         with:
           files: |
-            README_COPY.md=output/README_UPDATED.md
+            README_COPY.md
+            README_COPY.md=README.md
             
-      - name: Replace contents in README with badges
-        run: mv output/README_UPDATED.md README.md
-
 #  COMMIT BADGES
       - name: Commit badge
         run: |
