@@ -18,30 +18,17 @@ jobs:
     steps:
       - name: "Fetching Repository Contents"
         uses: actions/checkout@main
+        
+      - name: "Add Badge Template to existing README.md"
+        run: |
+          cat templates/reusable-includes.md README.md > temp-reusable-includes.md
+          mv temp-reusable-includes.md templates/reusable-includes.md
 
       - name: "Dynamic Badge Template Render"
         uses: varunsridharan/action-dynamic-readme@main
         with:
           files: |
             templates/reusable-includes.md=output/reusable-includes.md
-          
-      - name: "Add Rendered Badge Template to existing README.md"
-        run: |
-          cat output/reusable-includes.md README.md > TEMP-README.md
-          mv -n TEMP-README.md README.md
-
-#  COMMIT BADGES and README.md changes
-      - name: Commit badge
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add README.md
-          git commit -m "Added/Updated badges" || true
-
-#  PUSH BADGE COMMIT
-      - name: Push badge commit
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+        env:
+          GITHUB: ${{ secrets.GITHUB_TOKEN }}
 
