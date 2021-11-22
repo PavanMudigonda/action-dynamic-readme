@@ -22,8 +22,8 @@ jobs:
       - name: "Add Badge Template to existing README.md"
         run: |
           cat templates/reusable-includes.md README.md > temp-reusable-includes.md
-          uniq temp-reusable-includes.md uniq-reusable-includes.md
-          mv uniq-reusable-includes.md templates/reusable-includes.md
+          awk '!visited[$0]++' temp-reusable-includes.md > deduplicated_reusable-includes.md
+          mv deduplicated_reusable-includes.md templates/reusable-includes.md
           
 
       - name: "Dynamic Badge Template Render"
