@@ -42,7 +42,22 @@ jobs:
         uses: varunsridharan/action-dynamic-readme@main
         with:
           files: |
-            README_COPY.md=README.md
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            README_COPY.md=output/README_UPDATED.md
+            
+      - name: Replace contents in README with badges
+        run: mv output/README_UPDATED.md README.md
 
+#  COMMIT BADGES
+      - name: Commit badge
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "Added/Updated readme" || true
+
+#  PUSH BADGE COMMIT
+      - name: Push badge commit
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
